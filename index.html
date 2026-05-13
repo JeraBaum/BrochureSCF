@@ -16,18 +16,19 @@
             height: 100vh; 
             overflow: hidden;
         }
-        /* El contenedor ahora es flexible */
-        .flipbook-viewport {
+        .flipbook .page {
+            background: white;
+            overflow: hidden; /* Corta cualquier efecto que intente salir de la hoja */
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            height: 100%;
         }
-        .flipbook img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: contain; /* Evita que la imagen se deforme */
+
+       .flipbook img {
+           width: 100% !important;
+           height: 100% !important;
+           object-fit: fill; /* Obliga a la imagen a ocupar todo el cuadro de la página */
+           display: block;
         }
     </style>
 </head>
